@@ -6,7 +6,7 @@
 ' Name:           Kaleido Life
 ' Description:    Cellular Automata cycling into kaleidoscope-like patterns.
 ' Copyright:      Martin Latter, June 2013.
-' Version:        0.04
+' Version:        0.05
 ' License:        MIT
 ' URL:            https://github.com/Tinram/KLife.git
 '
@@ -54,15 +54,13 @@ DIM AS INTEGER mX, mY, mB
 DIM SHARED AS UINTEGER iSX, iSY
 DIM SHARED AS INTEGER nextStateHigh = 255, nextStateLow = 0
 DIM AS STRING sXClicked = CHR(255) + "k", sFilename
-DIM AS DOUBLE fTimer, fLog
 
 SCREENINFO iSX, iSY
 
 
 DIM SHARED AS tCell aCells(0 TO iSX - 1, 0 TO iSY - 1)
-	' shared:
-	'	1. needed for use in tCell.calcNextState()
-	' 	2. puts aCells in heap; not enough room in stack for over 200x200
+	' shared: 1. needed for use in tCell.calcNextState()
+	'         2. puts aCells in heap; not enough room in stack for > 200x200
 
 
 SUB tCell.calcNextState()
@@ -210,7 +208,7 @@ DO
 
 				DIM AS INTEGER xx, yy
 
-				FOR y AS INTEGER = -25 TO 25 ' circle generator, credit: David Watson
+				FOR y AS INTEGER = -25 TO 25 ' cursor circle generator, credit: David Watson
 					FOR x AS INTEGER = -25 TO 25
 						xx = mX + x
 						yy = mY + y
