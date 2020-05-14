@@ -4,6 +4,10 @@
 #### Kaleido Life
 
 
+[1]: https://tinram.github.io/images/klife.jpg
+![KLife][1]
+
+
 ## Credits
 
 + John Horton Conway (Game of Life)
