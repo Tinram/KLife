@@ -8,6 +8,45 @@
 ![KLife][1]
 
 
+## Controls
+
+action | key |
+:--- | :--- |
+paint black | <kbd>mouse left</kbd> *down* |
+paint white | <kbd>mouse right</kbd> *down* |
+parameters | <kbd>F1</kbd> - <kbd>F4</kbd> |
+reset / clear | <kbd>R</kbd> |
+screenshot |<kbd>S</kbd> |
+exit | <kbd>ESC</kbd> |
+
+
+## Build
+
+Install [FreeBASIC](http://www.freebasic.net/forum/viewforum.php?f=1) compiler (*fbc*).
+
+(KLife can be compiled with either the x32 or x64 version of *fbc*, but x32 needs pointer datatype changed (see source comment))
+
+Ensure GCC is available: `whereis gcc`
+
+### Linux
+
+```bash
+    make
+```
+
+### Windows / Compile Manually
+
+```bash
+    fbc KLife.bas -w all -gen gcc -O max -Wl -s
+```
+
+or head for max:
+
+```bash
+    fbc KLife.bas -w all -gen gcc -Wl -s -Wc -Ofast,-march=native,-mtune=native,-funroll-loops,-fomit-frame-pointer,-fivopts
+```
+
+
 ## Credits
 
 + John Horton Conway (Game of Life)
