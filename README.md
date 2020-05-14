@@ -12,8 +12,8 @@
 
 action | key |
 :--- | :--- |
-paint black | <kbd>mouse left</kbd> *down* |
-paint white | <kbd>mouse right</kbd> *down* |
+paint black | <kbd>mouse left</kbd> |
+paint white | <kbd>mouse right</kbd> |
 parameters | <kbd>F1</kbd> - <kbd>F4</kbd> |
 reset / clear | <kbd>R</kbd> |
 screenshot |<kbd>S</kbd> |
