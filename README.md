@@ -40,7 +40,7 @@ Ensure GCC is available: `whereis gcc`
     fbc KLife.bas -w all -gen gcc -O max -Wl -s
 ```
 
-or head for max:
+or aim for max on slower PCs:
 
 ```bash
     fbc KLife.bas -w all -gen gcc -Wl -s -Wc -Ofast,-march=native,-mtune=native,-funroll-loops,-fomit-frame-pointer,-fivopts
